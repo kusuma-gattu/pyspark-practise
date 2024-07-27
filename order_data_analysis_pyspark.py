@@ -14,7 +14,7 @@ print("Read orders and customers data successfully")
 
 # 2. Remove double quotes from order_id and customer_id in orders dataframe
 df_orders = df_orders.withColumn("order_id", regexp_replace("order_id", "\"", "")) \
-                    .withColumn("customer_id", regexp_replace("customre_id", "\"", ""))
+                    .withColumn("customer_id", regexp_replace("customer_id", "\"", ""))
 
 # 3. Remove double quotes from customer_id and customer_unique_id in customers dataframe
 df_customers = df_customers.withColumn("customer_id", regexp_replace("customer_id", "\"", "")) \
